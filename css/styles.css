@@ -1,0 +1,32 @@
+/* 自定义样式 */
+.logo-placeholder {
+    width: 120px;
+    height: 40px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+}
+
+/* 导航链接样式 */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* 活跃链接样式 */
+.nav-link.active::after {
+    width: 100%;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辟谣网站</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // 配置Tailwind的暗黑模式
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <!-- 头部组件将通过JS加载 -->
+    <header id="header-container"></header>
+    
+    <!-- 主要内容区域 -->
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- 主图 -->
+        <div class="flex justify-center mb-8">
+            <img src="assets/images/poster.jpg" alt="主题海报" class="max-w-full h-auto rounded-lg shadow-lg">
+        </div>
+        
+        <!-- 引言文字 -->
+        <div class="text-center text-lg text-gray-700 dark:text-gray-300 italic max-w-2xl mx-auto mb-8">
+            <p>"可是大人，生而微末者，当真无声吗？"</p>
+            <p>"百姓之声，闻之者，有矣。"</p>
+        </div>
+        
+        <!-- 导航按钮 -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+            <a href="rumors.html" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition-colors duration-300 text-center w-full sm:w-auto">
+                与温无缺/盈盈/东阙公子相关谣言
+            </a>
+            <a href="debunk.html" class="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg shadow-md transition-colors duration-300 text-center w-full sm:w-auto">
+                辟谣整理
+            </a>
+        </div>
+    </main>
+    
+    <!-- 底部组件将通过JS加载 -->
+    <footer id="footer-container"></footer>
+    
+    <!-- 暗黑模式切换脚本 -->
+    <script src="js/darkMode.js" type="module"></script>
+    <!-- 组件加载脚本 -->
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

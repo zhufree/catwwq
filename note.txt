@@ -1,0 +1,40 @@
+# 辟谣网站项目记录
+
+## 项目概述
+- 静态网站项目
+- 使用ES6模块搭建组件
+- 使用Tailwind CSS编写样式
+- 支持夜间模式
+- 主要功能：谣言和辟谣平台
+
+## 项目结构
+- index.html - 主页面
+- rumors.html - 谣言页面（使用tab形式分为两页）
+- debunk.html - 辟谣页面
+- css/styles.css - 自定义样式
+- js/darkMode.js - 暗黑模式切换功能
+- js/main.js - 主要JavaScript文件，用于加载组件
+- js/components/Header.js - 头部组件（左右两端分别放置yingying和wuque图片）
+- js/components/Footer.js - 底部组件（文字前添加cat图片）
+- assets/images/ - 图片资源目录（包含yingying.jpg、wuque.jpg和cat.jpg）
+
+## 已完成任务
+- [2025-05-02] 在首页添加导航按钮，分别链接到谣言页面和辟谣页面
+- [2025-05-02] 更新首页内容，添加poster.jpg大图和引言文字
+- [2025-05-02] 创建辟谣页面(debunk.html)，仅包含基本结构和组件
+- [2025-05-02] 添加图片到组件：Header左右两端分别放置yingying和wuque图片，Footer文字前添加cat图片
+- [2025-05-02] 创建谣言页面(rumors.html)，使用tab形式分为两页
+- [2025-05-02] 简化Footer组件，只居中显示“Powered By 未央城打工人”
+- [2025-05-02] 创建基本项目结构
+- [2025-05-02] 实现Header组件（左侧logo占位，中间放置谣言和辟谣入口）
+- [2025-05-02] 实现暗黑模式切换功能
+- [2025-05-02] 整合组件到index.html
+
+## 待完成任务
+- 完善辟谣页面(debunk.html)内容
+- 完善谣言页面(rumors.html)内容
+- 实现关于我们页面(about.html)
+- 实现联系我们页面(contact.html)
+- 实现隐私政策页面(privacy.html)
+- 添加实际logo
+- 优化移动端响应式设计
