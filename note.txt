@@ -19,6 +19,10 @@
 - assets/images/ - 图片资源目录（包含yingying.jpg、wuque.jpg和cat.jpg）
 
 ## 已完成任务
+- [2025-05-02] 在 js/components/figure-zhangcuo-and-gay.js 中添加分段图片画廊，分别展示来自 'assets/images/debunk/ZhangcuoAndGay' 下三个子文件夹的图片。
+- [2025-05-02] 重组 debunk.html 页面结构，创建'离人泪剧情'、'唐钱令'、'天上来'三大板块，并将现有组件移至'离人泪剧情'下。
+- [2025-05-02] 在 js/components/what-did-liquor-get.js 中添加图片画廊，展示 'assets/images/debunk/WhatDidTheLiquorGetFor' 中的图片。
+- [2025-05-02] 在 js/components/why-take-liquor.js 中添加图片画廊，展示 'assets/images/debunk/WhyTakeTheLiquor' 中的图片，样式为每行两张，保持宽高比。
 - [2025-05-02] 在 js/components/game-of-interests.js 中添加图片画廊，展示 'assets/images/debunk/GameOfInterests' 中的图片，并调整样式为每行两张，保持宽高比。
 - [2025-05-02] 将辟谣页面(debunk.html)的“一叶平生”部分重构为ES6模块(js/yiyepingsheng.js)，实现点击标题展开/收起内容功能
 - [2025-05-02] 在首页添加导航按钮，分别链接到谣言页面和辟谣页面

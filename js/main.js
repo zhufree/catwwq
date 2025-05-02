@@ -5,6 +5,8 @@ import { initYiyepingsheng } from './components/yiyepingsheng.js'; // 导入一�
 import { initWwqAim } from './components/wwq-aim.js';
 import { initGameOfInterest } from './components/game-of-interests.js';
 import { initWhyTakeLiquor } from './components/why-take-liquor.js';
+import { initWhatDidLiquorGet } from './components/what-did-liquor-get.js'
+import { initFigureZhangCuoAndGay } from './components/figure-zhangcuo-and-gay.js';
 // 初始化函数
 function init() {
     // 加载Header组件
@@ -26,6 +28,8 @@ function init() {
     initWwqAim('wwq-aim-container');
     initGameOfInterest('game-of-interests-container')
     initWhyTakeLiquor('why-take-liquor-container')
+    initWhatDidLiquorGet('what-did-liquor-get-container')
+    initFigureZhangCuoAndGay('figure-zhangcuo-and-gay-container')
 }
 
 // 当DOM加载完成后初始化

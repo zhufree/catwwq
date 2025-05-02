@@ -86,6 +86,24 @@ export function createWhyTakeLiquorContent() {
         <h4 class="text-red-700 dark:text-red-300 font-bold mb-2">结论</h4>
         <p class="text-gray-700 dark:text-gray-300">温无缺确实“骗”取了离人泪，但此举出于急迫性和重要性。她因洛神失约、群英会迫在眉睫，不得不以离人泪作为补救措施，确保生金瓯计划的顺利实施，为黎民百姓谋福祉。</p>
       </div>
+
+      <!-- 图片证据画廊 -->
+      <div class="mt-6">
+        <h4 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">相关图片证据</h4>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 1.png" alt="取酒原因证据 1" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 2.png" alt="取酒原因证据 2" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 3.png" alt="取酒原因证据 3" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 4.png" alt="取酒原因证据 4" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 5.png" alt="取酒原因证据 5" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 6.png" alt="取酒原因证据 6" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 7.png" alt="取酒原因证据 7" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 8.png" alt="取酒原因证据 8" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 9.png" alt="取酒原因证据 9" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 10.png" alt="取酒原因证据 10" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhyTakeTheLiquor/图片 11.png" alt="取酒原因证据 11" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+        </div>
+      </div>
     `;
     
     // 组装组件
