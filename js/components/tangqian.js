@@ -3,6 +3,9 @@
  * 实现点击标题展开/收起详细内容的功能，并以适当的UI展示内容
  */
 
+// 导入通用图片模态框组件
+import { setupImageGallery } from '../utils/image-modal.js';
+
 // 创建唐钱案分析内容
 export function createTangqianAnalysisContent() {
     // 创建主容器
@@ -176,6 +179,11 @@ export function createTangqianAnalysisContent() {
     // 组装组件
     container.appendChild(title);
     container.appendChild(content);
+    
+    // 使用通用图片模态框组件设置图片点击事件
+    setTimeout(() => {
+        setupImageGallery(imageGallery);
+    }, 100);
 
     return container;
 }

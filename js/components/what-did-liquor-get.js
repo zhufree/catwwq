@@ -3,6 +3,9 @@
  * 实现点击标题展开/收起详细内容的功能，并以适当的UI展示内容
  */
 
+// 导入通用图片模态框组件
+import { setupImageGallery } from '../utils/image-modal.js';
+
 // 创建离人泪换得之物内容
 export function createWhatDidLiquorGetContent() {
     // 创建主容器
@@ -59,16 +62,16 @@ export function createWhatDidLiquorGetContent() {
         <h4 class="text-red-700 dark:text-red-300 font-bold mb-2">结论</h4>
         <p class="text-gray-700 dark:text-gray-300">离人泪为少东家换取了寻找寒姨的线索，体现了其人情价值，而非单纯物质交换。红尘刀主人可能是李煜或周蔷，具体身份待开封终章揭晓，当前线索指向两者均有动机与能力影响生金瓯计划。</p>
       </div>
-      <div class="mt-6">
+      <div class="mt-6" id="liquor-image-gallery">
         <h4 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">相关图片证据</h4>
         <div class="grid grid-cols-2 gap-4">
-          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 1.png" alt="离人泪价值证据 1" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 2.png" alt="离人泪价值证据 2" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 3.png" alt="离人泪价值证据 3" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 4.png" alt="离人泪价值证据 4" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 5.png" alt="离人泪价值证据 5" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 6.png" alt="离人泪价值证据 6" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 7.png" alt="离人泪价值证据 7" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 1.png" alt="离人泪价值证据 1" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 2.png" alt="离人泪价值证据 2" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 3.png" alt="离人泪价值证据 3" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 4.png" alt="离人泪价值证据 4" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 5.png" alt="离人泪价值证据 5" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 6.png" alt="离人泪价值证据 6" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+          <img src="assets/images/debunk/WhatDidTheLiquorGetFor/图片 7.png" alt="离人泪价值证据 7" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
         </div>
       </div>
     `;
@@ -76,6 +79,14 @@ export function createWhatDidLiquorGetContent() {
     // 组装组件
     container.appendChild(title);
     container.appendChild(content);
+    
+    // 使用通用图片模态框组件设置图片点击事件
+    setTimeout(() => {
+      const imageGallery = content.querySelector('#liquor-image-gallery');
+      if (imageGallery) {
+        setupImageGallery(imageGallery);
+      }
+    }, 100);
     
     return container;
   }

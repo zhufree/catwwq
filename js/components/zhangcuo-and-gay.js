@@ -3,6 +3,9 @@
  * 实现点击标题展开/收起详细内容的功能，并以适当的UI展示内容
  */
 
+// 导入通用图片模态框组件
+import { setupImageGallery } from '../utils/image-modal.js';
+
 // 创建樊楼戏局与张错作用内容
 export function createFigureZhangCuoAndGayContent() {
     // 创建主容器
@@ -81,18 +84,18 @@ export function createFigureZhangCuoAndGayContent() {
       </div>
 
       <!-- 图片证据画廊 -->
-      <div class="mt-8">
+      <div class="mt-8" id="zhangcuo-gay-image-gallery">
         <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 border-b pb-2">相关图片证据</h3>
 
         <!-- 欢喜伉俪 相关图片 -->
         <div class="mt-6 mb-8">
           <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">欢喜伉俪 相关图片</h4>
           <div class="grid grid-cols-2 gap-4">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/1.png" alt="欢喜伉俪 证据 1" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/2.png" alt="欢喜伉俪 证据 2" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/3.png" alt="欢喜伉俪 证据 3" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/4.png" alt="欢喜伉俪 证据 4" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/5.png" alt="欢喜伉俪 证据 5" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/1.png" alt="欢喜伉俪 证据 1" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/2.png" alt="欢喜伉俪 证据 2" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/3.png" alt="欢喜伉俪 证据 3" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/4.png" alt="欢喜伉俪 证据 4" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_Gay/5.png" alt="欢喜伉俪 证据 5" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
           </div>
         </div>
 
@@ -100,11 +103,11 @@ export function createFigureZhangCuoAndGayContent() {
         <div class="mt-6 mb-8">
           <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">张错 相关图片</h4>
           <div class="grid grid-cols-2 gap-4">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 1.png" alt="张错 证据 1" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 2.png" alt="张错 证据 2" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 3.png" alt="张错 证据 3" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 4.png" alt="张错 证据 4" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 5.png" alt="张错 证据 5" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 1.png" alt="张错 证据 1" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 2.png" alt="张错 证据 2" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 3.png" alt="张错 证据 3" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 4.png" alt="张错 证据 4" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuo/图片 5.png" alt="张错 证据 5" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
           </div>
         </div>
 
@@ -112,9 +115,9 @@ export function createFigureZhangCuoAndGayContent() {
         <div class="mt-6">
           <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">张错与欢喜伉俪 综合图片</h4>
           <div class="grid grid-cols-2 gap-4">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuoandGay/图片 1.png" alt="综合证据 1" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuoandGay/图片 2.png" alt="综合证据 2" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuoandGay/图片 3.png" alt="综合证据 3" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuoandGay/图片 1.png" alt="综合证据 1" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuoandGay/图片 2.png" alt="综合证据 2" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+            <img src="assets/images/debunk/ZhangcuoAndGay/1_figure_ZhangCuoandGay/图片 3.png" alt="综合证据 3" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
           </div>
         </div>
       </div>
@@ -123,6 +126,14 @@ export function createFigureZhangCuoAndGayContent() {
     // 组装组件
     container.appendChild(title);
     container.appendChild(content);
+    
+    // 使用通用图片模态框组件设置图片点击事件
+    setTimeout(() => {
+      const imageGallery = content.querySelector('#zhangcuo-gay-image-gallery');
+      if (imageGallery) {
+        setupImageGallery(imageGallery);
+      }
+    }, 100);
     
     return container;
   }

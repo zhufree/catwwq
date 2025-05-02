@@ -1,7 +1,10 @@
 /**
- * 温无缺的目的辟谣模块
+ * 温无缺的目的辩谣模块
  * 实现点击标题展开/收起详细内容的功能
  */
+
+// 导入通用图片模态框组件
+import { setupImageGallery } from '../utils/image-modal.js';
 
 // 创建温无缺的目的辟谣内容
 export function createWwqAimContent() {
@@ -85,11 +88,28 @@ export function createWwqAimContent() {
           </div>
         </div>
       </div>
+      
+      <!-- 添加图片证据区域 -->
+      <div class="mt-6" id="wwq-aim-image-gallery">
+        <h4 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">相关图片证据</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <img src="assets/images/debunk/wwq-aim/图片1.png" alt="温无缺目的证据1" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+          <img src="assets/images/debunk/wwq-aim/图片2.png" alt="温无缺目的证据2" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        </div>
+      </div>
     `;
     
     // 组装组件
     container.appendChild(title);
     container.appendChild(content);
+    
+    // 使用通用图片模态框组件设置图片点击事件
+    setTimeout(() => {
+      const imageGallery = content.querySelector('#wwq-aim-image-gallery');
+      if (imageGallery) {
+        setupImageGallery(imageGallery);
+      }
+    }, 100);
     
     return container;
   }

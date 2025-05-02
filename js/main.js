@@ -6,8 +6,12 @@ import { initWwqAim } from './components/wwq-aim.js';
 import { initGameOfInterest } from './components/game-of-interests.js';
 import { initWhyTakeLiquor } from './components/why-take-liquor.js';
 import { initWhatDidLiquorGet } from './components/what-did-liquor-get.js'
-import { initFigureZhangCuoAndGay } from './components/figure-zhangcuo-and-gay.js';
+import { initFigureZhangCuoAndGay } from './components/zhangcuo-and-gay.js';
 import { initTangqianAnalysis } from './components/tangqian.js';
+import { initCharacterMotivations } from './components/character-motivations.js';
+import { initZhuYuTimeline } from './components/zhuyu-timeline.js';
+import { initTragedyAnalysis } from './components/factor-of-tragedy.js';
+import { initDisasterTruthSummary } from './components/truth-of-disaster.js';
 // 初始化函数
 function init() {
     // 加载Header组件
@@ -32,6 +36,10 @@ function init() {
     initWhatDidLiquorGet('what-did-liquor-get-container')
     initFigureZhangCuoAndGay('figure-zhangcuo-and-gay-container')
     initTangqianAnalysis('tangqian-container')
+    initCharacterMotivations('character-motivation-container')
+    initZhuYuTimeline('zhuyu-timeline-container')
+    initTragedyAnalysis('factor-of-tragedy-container')
+    initDisasterTruthSummary('truth-of-disaster-container')
 }
 
 // 当DOM加载完成后初始化

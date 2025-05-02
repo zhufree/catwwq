@@ -3,6 +3,9 @@
  * 实现点击标题展开/收起详细内容的功能，并以适当的UI展示内容
  */
 
+// 导入通用图片模态框组件
+import { setupImageGallery } from '../utils/image-modal.js';
+
 // 创建离人泪利益博弈内容
 export function createGameOfInterestContent() {
   // 创建主容器
@@ -44,7 +47,7 @@ export function createGameOfInterestContent() {
           <p class="text-gray-700 dark:text-gray-300">江南国主李煜、醉花阴门主周蔷</p>
         </div>
       </div>
-      <p class="text-gray-700 dark:text-gray-300 mt-4">红尘刀的主人（二主之一）要求洛神必须到场，否则不配合生金瓯计划。因此，温无缺需引洛神现身或将离人泪交予红尘刀主人。</p>
+      <p class="text-gray-700 dark:text-gray-300 mt-4">红尘刀的主人（二主之一）要求洛神必须到场，否则不配合生金瓯计划。因此，温无缺需引洛神现身或将离人泪（洛神代表物）交予红尘刀主人。</p>
     </div>
     
     <!-- 洛神寒香寻与东阙交易 -->
@@ -100,35 +103,45 @@ export function createGameOfInterestContent() {
     </div>
     
     <!-- 图片证据画廊 -->
-    <div class="mt-6">
-      <h4 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">相关图片证据</h4>
+    <div class="mt-8" id="game-of-interests-image-gallery">
+      <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 border-b pb-2">相关图片证据</h3>
       <div class="grid grid-cols-2 gap-4">
-        <img src="assets/images/debunk/GameOfInterests/图片 1.png" alt="利益博弈证据 1" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 2.png" alt="利益博弈证据 2" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 3.png" alt="利益博弈证据 3" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 4.png" alt="利益博弈证据 4" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 5.png" alt="利益博弈证据 5" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 6.png" alt="利益博弈证据 6" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 7.png" alt="利益博弈证据 7" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 8.png" alt="利益博弈证据 8" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 9.png" alt="利益博弈证据 9" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 10.png" alt="利益博弈证据 10" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 11.png" alt="利益博弈证据 11" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 12.png" alt="利益博弈证据 12" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 13.png" alt="利益博弈证据 13" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 14.png" alt="利益博弈证据 14" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 15.png" alt="利益博弈证据 15" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 16.png" alt="利益博弈证据 16" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 17.png" alt="利益博弈证据 17" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 18.png" alt="利益博弈证据 18" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
-        <img src="assets/images/debunk/GameOfInterests/图片 19.png" alt="利益博弈证据 19" class="rounded-lg shadow-md w-full cursor-pointer hover:scale-105 transition-transform duration-300" onclick="showImageModal(this.src)">
+        <img src="assets/images/debunk/GameOfInterests/图片 1.png" alt="利益博弈证据 1" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 2.png" alt="利益博弈证据 2" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 3.png" alt="利益博弈证据 3" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 4.png" alt="利益博弈证据 4" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 5.png" alt="利益博弈证据 5" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 6.png" alt="利益博弈证据 6" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 7.png" alt="利益博弈证据 7" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 8.png" alt="利益博弈证据 8" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 9.png" alt="利益博弈证据 9" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 10.png" alt="利益博弈证据 10" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 11.png" alt="利益博弈证据 11" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 12.png" alt="利益博弈证据 12" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 13.png" alt="利益博弈证据 13" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 14.png" alt="利益博弈证据 14" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 15.png" alt="利益博弈证据 15" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 16.png" alt="利益博弈证据 16" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 17.png" alt="利益博弈证据 17" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 18.png" alt="利益博弈证据 18" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
+        <img src="assets/images/debunk/GameOfInterests/图片 19.png" alt="利益博弈证据 19" class="rounded-lg shadow-md w-full hover:opacity-90 transition-opacity">
       </div>
     </div>
+    
+    <!-- 图片证据画廊 -->
   `;
   
   // 组装组件
   container.appendChild(title);
   container.appendChild(content);
+  
+  // 使用通用图片模态框组件设置图片点击事件
+  setTimeout(() => {
+    const imageGallery = content.querySelector('#game-of-interests-image-gallery');
+    if (imageGallery) {
+      setupImageGallery(imageGallery);
+    }
+  }, 100);
   
   return container;
 }
