@@ -19,8 +19,11 @@
 - assets/images/ - 图片资源目录（包含yingying.jpg、wuque.jpg和cat.jpg）
 
 ## 已完成任务
+- [2025-05-02] 为 tuishou.js 组件添加图片库（tuishou 目录下的图片）并集成通用图片模态框功能。
+- [2025-05-02] 为 shizhen.js 组件添加图片库（shizhen 目录下的图片）并集成通用图片模态框功能。
 - [2025-05-02] 为 truth-of-disaster.js 组件添加图片库（TheTruthOfDisaster 目录下的图片）并集成通用图片模态框功能。
 - [2025-05-02] 为 factor-of-tragedy.js 组件添加图片库（FactorOfTragedy 目录下的图片）并集成通用图片模态框功能。
+- [2025-05-02] 优化 yiyepingsheng.js 组件的文字内容 UI，使其更丰富。
 - [2025-05-02] 优化 yiyepingsheng.js 组件的图片库UI，并集成通用图片模态框功能。
 - [2025-05-02] 为 zhangcuo-and-gay.js, why-take-liquor.js, game-of-interests.js 组件集成通用图片模态框功能，并修正了期间误改的图片路径。
 - [2025-05-02] 在 js/components/figure-zhangcuo-and-gay.js 中添加分段图片画廊，分别展示来自 'assets/images/debunk/ZhangcuoAndGay' 下三个子文件夹的图片。

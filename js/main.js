@@ -12,6 +12,8 @@ import { initCharacterMotivations } from './components/character-motivations.js'
 import { initZhuYuTimeline } from './components/zhuyu-timeline.js';
 import { initTragedyAnalysis } from './components/factor-of-tragedy.js';
 import { initDisasterTruthSummary } from './components/truth-of-disaster.js';
+import { initShiZhenAnalysis } from './components/shizhen.js';
+import { initTangqianPusherDebunk } from './components/tuishou.js';
 // 初始化函数
 function init() {
     // 加载Header组件
@@ -40,6 +42,8 @@ function init() {
     initZhuYuTimeline('zhuyu-timeline-container')
     initTragedyAnalysis('factor-of-tragedy-container')
     initDisasterTruthSummary('truth-of-disaster-container')
+    initShiZhenAnalysis('shizhen-container')
+    initTangqianPusherDebunk('tuishou-container')
 }
 
 // 当DOM加载完成后初始化
