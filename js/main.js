@@ -14,6 +14,11 @@ import { initTragedyAnalysis } from './components/factor-of-tragedy.js';
 import { initDisasterTruthSummary } from './components/truth-of-disaster.js';
 import { initShiZhenAnalysis } from './components/shizhen.js';
 import { initTangqianPusherDebunk } from './components/tuishou.js';
+import { initTangqianTimelineExact } from './components/tangqian-timeline-exact.js';
+import { initOldTangqianAnalysisExact } from './components/old-tangqian-analysis-exact.js';
+import { initSongTangqianResponseExact } from './components/song-tangqian-response-exact.js';
+import { initLiangDao } from './components/liangdao.js';
+import { initSecondTangqianDebunkExact } from './components/second-tangqian-debunk-exact.js';
 // 初始化函数
 function init() {
     // 加载Header组件
@@ -44,6 +49,11 @@ function init() {
     initDisasterTruthSummary('truth-of-disaster-container')
     initShiZhenAnalysis('shizhen-container')
     initTangqianPusherDebunk('tuishou-container')
+    initTangqianTimelineExact('tangqian-timeline-exact-container')
+    initOldTangqianAnalysisExact('old-tangqian-analysis-exact-container');
+    initSongTangqianResponseExact('song-tangqian-response-exact-container');
+    initLiangDao('liangdao-container');
+    initSecondTangqianDebunkExact('second-tangqian-debunk-container')
 }
 
 // 当DOM加载完成后初始化
