@@ -1,101 +1,184 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>谣言 - 辟谣平台</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // 配置Tailwind的暗黑模式
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {}
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>谣言 - 辟谣平台</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // 配置Tailwind的暗黑模式
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {}
         }
-    </script>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Tab样式 */
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-    </style>
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Tab样式 */
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+  </style>
 </head>
 <body class="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-    <!-- 头部组件将通过JS加载 -->
-    <header id="header-container"></header>
-    
-    <!-- 主要内容区域 -->
-    <main class="container mx-auto px-4 py-8">
-        <!-- Tab导航 -->
-        <div class="flex border-b border-gray-300 dark:border-gray-700 mb-6">
-            <button id="tab1-btn" class="px-6 py-3 font-medium text-gray-800 dark:text-white border-b-2 border-blue-500 tab-btn active">
-                第一页
-            </button>
-            <button id="tab2-btn" class="px-6 py-3 font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white tab-btn">
-                第二页
-            </button>
-        </div>
-        
-        <!-- Tab内容 -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-            <!-- 第一个Tab内容 -->
-            <div id="tab1-content" class="tab-content active">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">谣言1</h2>
-                <!-- 此处留空 -->
+  <!-- 头部组件将通过JS加载 -->
+  <header id="header-container"></header>
+  
+  <!-- 主要内容区域 -->
+  <main class="container mx-auto px-4 py-8">
+    <!-- Tab导航 -->
+    <div class="flex border-b border-gray-300 dark:border-gray-700 mb-6">
+      <button id="tab1-btn" class="px-6 py-3 font-medium text-gray-800 dark:text-white border-b-2 border-blue-500 tab-btn active">
+          谣言1
+      </button>
+      <button id="tab2-btn" class="px-6 py-3 font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white tab-btn">
+          谣言2
+      </button>
+    </div>
+      
+      <!-- Tab内容 -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+      <!-- 第一个Tab内容 -->
+      <div id="tab1-content" class="tab-content active">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">混淆温无痕、温无缺二人及东阙公子指代</h2>
+        <!-- 第二张图片 -->
+        <!-- <div class="flex justify-center">
+          <img src="assets/images/rumor/rumor-1-now.png" alt="当前情况" class="max-w-xl h-auto rounded-lg shadow-md" style="max-width: 80%;">
+        </div> -->
+          
+        <!-- 事件说明 -->
+        <div class="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-6 border-l-4 border-blue-500">
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="md:w-3/4">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">原帖引起争议的最主要原因：</h3>
+              <p class="mb-4 text-gray-700 dark:text-gray-300">原帖主在对游戏剧情没有足够了解、甚至大概率没有看过游戏文案的前提下，错误地将温无痕、温无缺二人混淆，并且在大标题上带温无缺大名、甚至特地打括号标注温无缺游戏中另外一个名字盈盈进行强调。</p>
+              <p>最初争议标题时间：2025年4月27日07：28</p>
             </div>
-            
-            <!-- 第二个Tab内容 -->
-            <div id="tab2-content" class="tab-content">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">谣言2</h2>
-                <!-- 此处留空 -->
+            <div class="md:w-1/4 flex justify-center">
+              <img src="assets/images/rumor/rumor-1-begin.png" alt="谣言开始" class="max-w-full h-auto rounded-lg shadow-md" style="max-width: 50%;">
             </div>
+          </div>
         </div>
-    </main>
-    
-    <!-- 底部组件将通过JS加载 -->
-    <footer id="footer-container"></footer>
-    
-    <!-- 暗黑模式切换脚本 -->
-    <script src="js/darkMode.js" type="module"></script>
-    <!-- 组件加载脚本 -->
-    <script src="js/main.js" type="module"></script>
-    <!-- Tab切换脚本 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
+          
+        <!-- 时间线展示 -->
+        <div class="relative border-l-2 border-blue-500 pl-8 mb-6 ml-4">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">引起争议后事情发展轨迹：</h3>
             
-            tabBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // 移除所有按钮的活跃状态
-                    tabBtns.forEach(b => {
-                        b.classList.remove('border-blue-500');
-                        b.classList.remove('text-gray-800', 'dark:text-white');
-                        b.classList.add('text-gray-600', 'dark:text-gray-400');
-                    });
-                    
-                    // 添加当前按钮的活跃状态
-                    btn.classList.add('border-blue-500');
-                    btn.classList.add('text-gray-800', 'dark:text-white');
-                    btn.classList.remove('text-gray-600', 'dark:text-gray-400');
-                    
-                    // 隐藏所有内容
-                    tabContents.forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    
-                    // 显示对应的内容
-                    const tabId = btn.id.replace('-btn', '-content');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-        });
-    </script>
+          <!-- 时间点 1 -->
+          <div class="mb-6 relative">
+            <div class="absolute -left-10 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">（1）争议开始</h4>
+            <p class="text-gray-700 dark:text-gray-300">由于该帖大标题带了燕云npc温无缺大名，并且有明显错误的情况下，引起温无缺粉丝【后称盈推】进入帖子留言辟谣。</p>
+          </div>
+          
+          <!-- 时间点 2 -->
+          <div class="mb-6 relative">
+            <div class="absolute -left-10 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">（2）删除评论</h4>
+            <p class="text-gray-700 dark:text-gray-300">贴主删除拉黑了部分盈推辟谣。</p>
+          </div>
+          
+          <!-- 时间点 3 -->
+          <div class="mb-6 relative">
+            <div class="absolute -left-10 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">（3）新帖辟谣</h4>
+            <p class="text-gray-700 dark:text-gray-300">由于争议太多且被删评拉黑，部分盈推发新帖辟谣，表示贴主混淆温无缺和温无痕。</p>
+          </div>
+          
+          <!-- 时间点 4 -->
+          <div class="mb-6 relative">
+            <div class="absolute -left-10 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">（4）“道歉”但拒绝更改</h4>
+            <p class="text-gray-700 dark:text-gray-300">实锤之下，该贴主到盈推辟谣帖下“真诚道歉”，但拒绝在原帖道歉；修改了大标题温无缺（盈盈）大名，但仍然带了东阙公子的称呼。</p>
+            <!-- 第四张图片 -->
+            <div class="flex justify-center my-4">
+              <img src="assets/images/rumor/rumor-1-response.png" alt="回应" class="max-w-full h-auto rounded-lg shadow-md">
+            </div>
+            <p class="text-center">原贴主在盈推帖子“道歉”，但拒不更改标题/在原贴澄清</p>
+          </div>
+          
+          <!-- 时间点 5 -->
+          <div class="mb-6 relative">
+            <div class="absolute -left-10 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">（5）删除所有评论</h4>
+            <p class="text-gray-700 dark:text-gray-300">贴主删除了原帖所有评论，盈推澄清评论彻底被删除干净。</p>
+            <!-- 两个带comment的图片左右排列 -->
+            <div class="flex flex-row items-center justify-center gap-4 my-4">
+              <div class="max-w-xs">
+                <img src="assets/images/rumor/rumor-1-comment-1.png" alt="评论1" class="w-full h-auto rounded-lg shadow-md">
+              </div>
+              <div class="max-w-xs">
+                <img src="assets/images/rumor/rumor-1-comment-2.png" alt="评论2" class="w-full h-auto rounded-lg shadow-md">
+              </div>
+            </div>
+            <p class="text-center">原帖的评论被删得只剩十几条</p>
+          </div>
+          
+          <!-- 时间点 6 -->
+          <div class="mb-6 relative">
+            <div class="absolute -left-10 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">（6）现状</h4>
+            <p class="text-gray-700 dark:text-gray-300">时至撰文时间2025年5月2日，原帖仍然带着东队公子称呼，并未修改标题。</p>
+          </div>
+          <!-- 第三张图片 -->
+          <div class="flex justify-center">
+            <img src="assets/images/rumor/rumor-1-5-2.png" alt="相关说明" class="max-w-full h-auto rounded-lg shadow-md">
+          </div>
+        </div>
+      </div>
+      
+      <!-- 第二个Tab内容 -->
+      <div id="tab2-content" class="tab-content">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">谣言2</h2>
+        <!-- 此处留空 -->
+      </div>
+    </div>
+  </main>
+  
+  <!-- 底部组件将通过JS加载 -->
+  <footer id="footer-container"></footer>
+  
+  <!-- 暗黑模式切换脚本 -->
+  <script src="js/darkMode.js" type="module"></script>
+  <!-- 组件加载脚本 -->
+  <script src="js/main.js" type="module"></script>
+  <!-- Tab切换脚本 -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const tabBtns = document.querySelectorAll('.tab-btn');
+          const tabContents = document.querySelectorAll('.tab-content');
+          
+          tabBtns.forEach(btn => {
+              btn.addEventListener('click', () => {
+                  // 移除所有按钮的活跃状态
+                  tabBtns.forEach(b => {
+                      b.classList.remove('border-blue-500');
+                      b.classList.remove('text-gray-800', 'dark:text-white');
+                      b.classList.add('text-gray-600', 'dark:text-gray-400');
+                  });
+                  
+                  // 添加当前按钮的活跃状态
+                  btn.classList.add('border-blue-500');
+                  btn.classList.add('text-gray-800', 'dark:text-white');
+                  btn.classList.remove('text-gray-600', 'dark:text-gray-400');
+                  
+                  // 隐藏所有内容
+                  tabContents.forEach(content => {
+                      content.classList.remove('active');
+                  });
+                  
+                  // 显示对应的内容
+                  const tabId = btn.id.replace('-btn', '-content');
+                  document.getElementById(tabId).classList.add('active');
+              });
+          });
+      });
+  </script>
 </body>
 </html>
